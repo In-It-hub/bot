@@ -40,14 +40,4 @@
 			'parse_mode' => 'markdown'
 		]);
 	}
-
-
-
-	$apiURL = "https://api.telegram.org/bot".$token;
-	$getUpdates = file_get_contents($apiURL."/getUpdates?offset = 3&limit = 2");
-	$json = json_decode($getUpdates, true);
-echo "<pre>";
-	print_r($json);
-	echo "</br>";
-	print_r($json['result'][2]['message']['text']);
 ?>
