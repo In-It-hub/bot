@@ -29,6 +29,12 @@
 	$chat_id = $message->chat->id;
 	$text = $message->text;
 
+	$button = json_encode([
+				'resize_keyboard' => true,
+				'keyboard' => [
+					[['text' => "Покровск"],['text' => "Райполе"]]
+				]
+	]);
 	if (isset($text)) {
 		typing($chat_id);
 	}
@@ -37,7 +43,9 @@
 		bot('sendMessage', [
 			'chat_id' => $chat_id,
 			'text' => 'Добро пожаловать!!!',
-			'parse_mode' => 'markdown'
+			'parse_mode' => 'markdown',
+			'reply_markup' => $button
 		]);
 	}
+
 ?>
