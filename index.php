@@ -36,7 +36,7 @@
 	if ($text == "/start") {
 		bot('sendMessage', [
 			'chat_id' => $chat_id,
-			'text' => 'Добро пожаловать!',
+			'text' => 'Добро пожаловать!!!',
 			'parse_mode' => 'markdown'
 		]);
 	}
